@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.it3c_grp11_andrei">
+
+    <!-- ✅ Required for weather/news API and image loading -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.IT3C_Grp11_ANDREI"
+        tools:targetApi="31">
+
+        <!-- 🚀 App Launcher -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.IT3C_Grp11_ANDREI">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 📱 Core Activities -->
+        <activity android:name=".HomeActivity" android:exported="false" />
+        <activity android:name=".GrowActivity" android:exported="false" />
+        <activity android:name=".ConnectActivity" android:exported="false" />
+        <activity android:name=".CartActivity" android:exported="false" />
+        <activity android:name=".OrderHistoryActivity" android:exported="false" />
+
+        <!-- 📬 Trade Proposals & Responses -->
+        <activity android:name=".TradeResponseActivity" android:exported="false" />
+        <activity android:name=".MyTradeProposalsActivity" android:exported="false" />
+        <activity android:name=".TradeRequestsActivity" android:exported="false" />
+
+        <!-- 🛒 Separated Market (For Product Buying Only) -->
+        <activity
+            android:name=".MarketActivity"
+            android:exported="true"
+            android:theme="@style/Theme.IT3C_Grp11_ANDREI" />
+
+        <!-- 🔁 Trade Section (With Chat, Trade Offers, Post Add) -->
+        <activity
+            android:name=".TradeActivity"
+            android:exported="true"
+            android:theme="@style/Theme.IT3C_Grp11_ANDREI" />
+        <activity android:name=".ProposeTradeActivity" android:exported="false" />
+        <activity android:name=".TradeChatActivity" android:exported="false" />
+        <activity android:name=".AddTradeItemActivity" android:exported="false" />
+        <activity android:name=".BrowseTradePostsActivity" android:exported="false" />
+        <activity android:name=".ProfileActivity" android:exported="false" />
+
+    </application>
+</manifest>
